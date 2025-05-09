@@ -1,5 +1,9 @@
+<script setup>
+useHead({
+  title: "Koliagram",
+});
+</script>
+
 <template>
-  <div>
-    <NuxtPage />
-  </div>
+  <NuxtLayout />
 </template>

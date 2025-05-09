@@ -7,4 +7,14 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  app: {
+    head: {
+      link: [
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap",
+        },
+      ],
+    },
+  },
 });
