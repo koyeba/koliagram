@@ -13,7 +13,7 @@
       />
       <div class="flex gap-4 md:gap-4 lg:gap-6 xl:gap-6 items-center">
         <button
-          class="font-display text-sm mt-1 cursor-pointer rounded-full bg-[#FF630B] px-3 py-2 text-white"
+          class="font-display text-sm mt-1 cursor-pointer rounded-full bg-[#FF630B] hover:bg-[#ff7223] px-3 py-2 text-white"
         >
           Se connecter
         </button>
@@ -30,7 +30,7 @@
           class="mt-1 lg:hidden"
         />
         <button
-          class="hidden pr-3 py-2 lg:block text-sm mt-1 font-display cursor-pointer"
+          class="hidden pr-3 py-2 lg:block text-sm mt-1 font-display cursor-pointer hover:text-[#FF630B]"
         >
           Réservez votre démo
         </button>
