@@ -11,30 +11,115 @@
         alt="koliagram"
         class="w-40 hidden md:block lg:block cursor-pointer"
       />
-      <div class="flex gap-4 md:gap-4 lg:gap-6 xl:gap-6 items-center">
+      <div class="flex gap-3 md:gap-4 lg:gap-6 xl:gap-6 items-center">
         <button
-          class="font-display text-sm mt-1 cursor-pointer rounded-full bg-[#FF630B] hover:bg-[#ff7223] px-3 py-2 text-white"
+          class="font-display text-xs cursor-pointer rounded-full bg-[#FF630B] hover:bg-[#ff7223] px-3 py-2 text-white"
         >
           Se connecter
         </button>
-        <Icon
-          class="cursor-pointer"
-          icon="weui:shop-outlined"
-          width="24"
-          height="24"
-        />
-        <Icon
-          icon="iconamoon:menu-burger-horizontal-thin"
-          width="24"
-          height="24"
-          class="mt-1 lg:hidden"
-        />
-        <button
-          class="hidden pr-3 py-2 lg:block text-sm mt-1 font-display cursor-pointer hover:text-[#FF630B]"
-        >
-          Réservez votre démo
-        </button>
+        <div class="lg:hidden">
+          <button @click="toggleMenu">
+            <template v-if="!isOpen">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="mt-1"
+              >
+                <g
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path d="M5 5L19 19M5 19L19 5">
+                    <animate
+                      fill="freeze"
+                      attributeName="d"
+                      dur="0.2s"
+                      values="M5 5L19 19M5 19L19 5;M5 5L19 5M5 19L19 19"
+                    />
+                  </path>
+                  <path d="M12 12H12" opacity="0">
+                    <animate
+                      fill="freeze"
+                      attributeName="d"
+                      begin="0.2s"
+                      dur="0.2s"
+                      values="M12 12H12;M5 12H19"
+                    />
+                    <set
+                      fill="freeze"
+                      attributeName="opacity"
+                      begin="0.2s"
+                      to="1"
+                    />
+                  </path>
+                </g>
+              </svg>
+            </template>
+            <template v-else>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="mt-1"
+              >
+                <g
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path d="M5 12H19">
+                    <animate
+                      fill="freeze"
+                      attributeName="d"
+                      dur="0.2s"
+                      values="M5 12H19;M12 12H12"
+                    />
+                    <set
+                      fill="freeze"
+                      attributeName="opacity"
+                      begin="0.4s"
+                      to="0"
+                    />
+                  </path>
+                  <path d="M5 5L19 5M5 19L19 19" opacity="0">
+                    <animate
+                      fill="freeze"
+                      attributeName="d"
+                      begin="0.2s"
+                      dur="0.2s"
+                      values="M5 5L19 5M5 19L19 19;M5 5L19 19M5 19L19 5"
+                    />
+                    <set
+                      fill="freeze"
+                      attributeName="opacity"
+                      begin="0s"
+                      to="1"
+                    />
+                  </path>
+                </g>
+              </svg>
+            </template>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
 </template>
+
+<script lang="ts" setup>
+import { ref } from "vue";
+
+const isOpen = ref(false);
+
+function toggleMenu() {
+  isOpen.value = !isOpen.value;
+}
+</script>
