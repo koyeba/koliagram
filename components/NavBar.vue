@@ -11,14 +11,18 @@
         alt="koliagram"
         class="w-40 hidden md:block lg:block cursor-pointer"
       />
-      <div class="flex gap-3 md:gap-4 lg:gap-6 xl:gap-6 items-center">
+      <div class="flex gap-6 md:gap-4 lg:gap-6 xl:gap-6 items-center">
         <button
           class="font-display text-xs cursor-pointer rounded-full bg-[#FF630B] hover:bg-[#ff7223] px-3 py-2 text-white"
         >
           Se connecter
         </button>
         <div class="lg:hidden">
-          <button @click="toggleMenu">
+          <button
+            @click="toggleMenu"
+            class="fixed top-3 right-4 z-50 mt-1 focus:outline-none"
+          >
+            <!-- Hamburger Menu Icon-->
             <template v-if="!isOpen">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +64,7 @@
                 </g>
               </svg>
             </template>
+            <!-- Close Menu Icon-->
             <template v-else>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -108,6 +113,19 @@
               </svg>
             </template>
           </button>
+          <transition name="slide-down">
+            <nav
+              v-if="isOpen"
+              class="fixed top-0 left-0 px-6 py-14 w-full h-full bg-white text-black font-display z-40 flex flex-col items-end text-right"
+            >
+              <ul class="space-y-4 font-thin">
+                <li>
+                  <a href="#" class="text-xl">Réserver votre démo</a>
+                </li>
+                <li><a href="#" class="text-xl">S'inscrire</a></li>
+              </ul>
+            </nav>
+          </transition>
         </div>
       </div>
     </div>
@@ -123,3 +141,22 @@ function toggleMenu() {
   isOpen.value = !isOpen.value;
 }
 </script>
+
+<style scoped>
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 0.5s ease-in-out;
+}
+.slide-down-enter-from {
+  transform: translateY(-100%);
+}
+.slide-down-enter-to {
+  transform: translateY(0);
+}
+.slide-down-leave-from {
+  transform: translateY(0);
+}
+.slide-down-leave-to {
+  transform: translateY(-100%);
+}
+</style>
