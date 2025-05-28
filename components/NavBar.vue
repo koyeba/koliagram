@@ -22,7 +22,6 @@
             @click="toggleMenu"
             class="fixed top-3 right-4 z-50 mt-1 focus:outline-none"
           >
-            <!-- Hamburger Menu Icon-->
             <template v-if="!isOpen">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +41,7 @@
                     <animate
                       fill="freeze"
                       attributeName="d"
-                      dur="0.2s"
+                      dur="0.4s"
                       values="M5 5L19 19M5 19L19 5;M5 5L19 5M5 19L19 19"
                     />
                   </path>
@@ -64,7 +63,6 @@
                 </g>
               </svg>
             </template>
-            <!-- Close Menu Icon-->
             <template v-else>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +82,7 @@
                     <animate
                       fill="freeze"
                       attributeName="d"
-                      dur="0.2s"
+                      dur="0.1s"
                       values="M5 12H19;M12 12H12"
                     />
                     <set
@@ -99,7 +97,7 @@
                       fill="freeze"
                       attributeName="d"
                       begin="0.2s"
-                      dur="0.2s"
+                      dur="0.1s"
                       values="M5 5L19 5M5 19L19 19;M5 5L19 19M5 19L19 5"
                     />
                     <set
@@ -120,9 +118,9 @@
             >
               <ul class="space-y-4 font-thin">
                 <li>
-                  <a href="#" class="text-xl">Réserver votre démo</a>
+                  <a href="#" class="text-sm">Réserver votre démo</a>
                 </li>
-                <li><a href="#" class="text-xl">S'inscrire</a></li>
+                <li><a href="#" class="text-sm">S'inscrire</a></li>
               </ul>
             </nav>
           </transition>
@@ -133,13 +131,21 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const isOpen = ref(false);
 
 function toggleMenu() {
   isOpen.value = !isOpen.value;
 }
+
+watch(isOpen, (newVal) => {
+  if (newVal) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+});
 </script>
 
 <style scoped>
