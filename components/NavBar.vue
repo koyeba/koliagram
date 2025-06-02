@@ -1,22 +1,23 @@
 <template>
-  <nav class="w-full fixed px-6 sm:px-16 md:px-26 lg:px-36 py-4">
+  <nav class="w-full fixed py-4 px-6 sm:px-16 md:px-26 lg:px-36">
     <div class="flex justify-between">
-      <img
-        src="../public/symbol-koliagram.svg"
-        alt="koliagram"
-        class="w-8 block md:hidden lg:hidden cursor-pointer"
-      />
-      <img
-        src="../public/logo-koliagram.svg"
-        alt="koliagram"
-        class="w-40 hidden md:block lg:block cursor-pointer"
-      />
+      <NuxtLink to="/"
+        ><img
+          src="../public/symbol-koliagram.svg"
+          alt="koliagram"
+          class="w-8 block md:hidden lg:hidden cursor-pointer" />
+        <img
+          src="../public/logo-koliagram.svg"
+          alt="koliagram"
+          class="w-40 hidden md:block lg:block cursor-pointer"
+      /></NuxtLink>
       <div class="flex gap-6 md:gap-4 lg:gap-6 xl:gap-6 items-center">
-        <button
+        <NuxtLink
+          to="/login"
           class="font-display text-xs cursor-pointer rounded-full bg-[#FF630B] hover:bg-[#ff7223] px-3 py-2 text-white"
         >
           Se connecter
-        </button>
+        </NuxtLink>
         <div class="lg:hidden">
           <button
             @click="toggleMenu"
@@ -120,7 +121,6 @@
                 <li>
                   <a href="#" class="text-sm">Réserver votre démo</a>
                 </li>
-                <li><a href="#" class="text-sm">S'inscrire</a></li>
               </ul>
             </nav>
           </transition>
