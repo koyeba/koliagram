@@ -1,6 +1,6 @@
 <template>
   <div class="pt-30 xl:pt-45 px-6 text-center font-display">
-    <h3 class="text-xs xl:text-sm">Des solutions</h3>
+    <h3 class="text-xs xl:text-sm">Des solutions sur mesure</h3>
     <h1 class="text-4xl lg:text-5xl xl:text-7xl mt-1 tracking-tight">
       Pour vous accompagner <br />
       dans votre présence <br />

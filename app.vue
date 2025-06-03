@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Koliagram | Gérer votre présence en ligne",
+  title: "Koliagram | Plateforme et solutions de réputation en ligne",
 });
 </script>
 
