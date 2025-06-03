@@ -1,24 +1,26 @@
 <template>
   <div>
     <div class="py-4 px-6 sm:px-16 md:px-26 lg:px-36">
-      <NuxtLink to="/"
-        ><img
-          src="../public/symbol-koliagram.svg"
-          alt="koliagram"
-          class="w-8 block md:hidden lg:hidden cursor-pointer" />
+      <NuxtLink to="/" aria-label="Accueil">
+        <!-- Logo Mobile -->
         <img
-          src="../public/logo-koliagram.svg"
-          alt="koliagram"
-          class="w-40 hidden md:block lg:block cursor-pointer"
-      /></NuxtLink>
+          src="/symbol-koliagram.svg"
+          alt="Logo Koliagram (petit)"
+          class="w-8 block md:hidden"
+        />
+        <!-- Logo Desktop -->
+        <img
+          src="/logo-koliagram.svg"
+          alt="Logo Koliagram (grand)"
+          class="w-40 hidden md:block"
+        />
+      </NuxtLink>
     </div>
-    <div
-      class="flex items-center justify-center max-w-xl m-auto px-6 py-16 mt-35 md:shadow-sm rounded-xl font-display"
-    >
-      <div class="w-full px-6">
-        <h1 class="text-center text-2xl font-bold mb-8">Se connecter</h1>
+    <div class="flex max-w-lg m-auto mt-20 py-12 rounded-2xl lg:shadow-md">
+      <div class="font-display w-full px-12">
+        <h1 class="text-center text-2xl font-bold mb-14">Se connecter</h1>
         <form @submit.prevent="handleLogin">
-          <div class="mb-4">
+          <div class="mb-6">
             <label for="email" class="block text-sm mb-2 text-gray-600"
               >Email / Nom d'utilisateur
             </label>
@@ -31,7 +33,7 @@
               class="mt-1 block w-full text-sm px-4 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#FF630B]"
             />
           </div>
-          <div class="mb-8">
+          <div class="mb-6">
             <label for="password" class="block text-sm mb-2 text-gray-600"
               >Mot de passe</label
             >
@@ -39,6 +41,7 @@
               v-model="password"
               type="password"
               id="password"
+              placeholder="Mot de passe"
               required
               class="mt-1 block w-full text-sm px-4 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#FF630B]"
             />
@@ -50,6 +53,14 @@
             Se connecter
           </button>
         </form>
+        <div>
+          <p class="text-center text-xs text-gray-600 mt-4">
+            Vous n'avez pas de compte ?
+            <NuxtLink to="/register" class="text-[#FF630B] hover:text-black"
+              >Inscrivez-vous</NuxtLink
+            >
+          </p>
+        </div>
       </div>
     </div>
   </div>
