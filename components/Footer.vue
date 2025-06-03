@@ -1,29 +1,24 @@
 <template>
-  <footer
-    class="bg-[#F5F5F7] py-8 px-6 sm:px-16 md:px-26 lg:px-36 font-display xl:text-center"
-  >
+  <footer class="bg-[#F5F5F7] py-8 px-6">
     <img
-      src="../public/logo-koliagram.svg"
-      alt="Logo koliagram"
-      class="w-36 pb-2 xl:m-auto"
+      src="/logo-koliagram.svg"
+      alt="Logo Koliagram (grand)"
+      class="w-40 m-auto"
     />
-    <div class="py-3 flex flex-col gap-2">
-      <p class="text-sm cursor-pointer">En savoir plus</p>
-      <p class="text-xs font-thin cursor-pointer">Sentinelle</p>
-      <p class="text-xs font-thin cursor-pointer">Créations</p>
-      <p class="text-xs font-thin cursor-pointer">Réseaux sociaux</p>
-      <p class="text-xs font-thin cursor-pointer">
-        Contacter notre support 24/7
+    <nav
+      class="flex flex-col gap-2 py-3 font-display text-center"
+      aria-label="Navigation secondaire"
+    >
+      <p class="text-sm">En savoir plus</p>
+      <NuxtLink to="/login" class="text-xs font-thin">Se connecter</NuxtLink>
+      <p class="text-xs font-thin cursor-pointer">Réservez votre démo</p>
+      <p class="text-xs font-thin pt-8">
+        Copyright &copy; {{ currentYear }} Koliagram. Tous droits réservés.
       </p>
-      <p class="text-xs pt-10 font-thin cursor-pointer">Mentions Légales</p>
-      <p class="text-xs font-thin cursor-pointer">
-        Politique de confidentialité
-      </p>
-      <p class="text-xs font-thin cursor-pointer">Utilisation des cookies</p>
-      <p class="text-xs pt-5 font-thin">
-        Copyright &copy; {{ new Date().getFullYear() }} Koliagram. Tous droits
-        réservés.
-      </p>
-    </div>
+    </nav>
   </footer>
 </template>
+
+<script lang="ts" setup>
+const currentYear: number = new Date().getFullYear();
+</script>
