@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="w-full fixed py-4 px-6 sm:px-16 md:px-26 lg:px-36 xl:px-46"
+    class="w-full fixed py-6 px-6 sm:px-16 md:px-26 lg:px-36 xl:px-46"
     aria-label="Navigation principale"
   >
     <div class="flex justify-between">
@@ -22,12 +22,12 @@
         <NuxtLink
           to="/login"
           aria-label="Connexion"
-          class="text-white text-xs font-display px-3 py-2 rounded-full bg-[#FF630B] hover:bg-[#ff7223]"
+          class="text-white text-xs lg:text-sm font-display px-3 py-2 rounded-full bg-[#FF630B] hover:bg-[#ff7223]"
         >
           Se connecter
         </NuxtLink>
         <div
-          class="text-black hover:bg-black hover:text-white text-xs font-display px-3 py-2 rounded-full border"
+          class="text-black hover:bg-black hover:text-white text-xs lg:text-sm font-display px-3 py-2 rounded-full border"
           aria-label="Réservez votre démo"
         >
           Réservez votre démo

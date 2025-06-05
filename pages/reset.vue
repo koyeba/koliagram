@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="py-4 px-6 sm:px-16 md:px-26 lg:px-36 xl:px-46">
+    <div class="py-6 px-6 sm:px-16 md:px-26 lg:px-36 xl:px-46">
       <NuxtLink to="/" aria-label="Accueil">
         <!-- Logo Mobile -->
         <img

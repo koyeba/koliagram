@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="py-4 px-6 sm:px-16 md:px-26 lg:px-36 xl:px-46">
+    <div class="py-6 px-6 sm:px-16 md:px-26 lg:px-36 xl:px-46">
       <NuxtLink to="/" aria-label="Accueil">
         <!-- Logo Mobile -->
         <img
@@ -45,7 +45,7 @@
               required
               class="block w-full text-sm px-4 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#FF630B]"
             />
-            <div class="text-right">
+            <div class="text-right mt-1">
               <NuxtLink
                 to="/reset"
                 class="text-xs text-gray-400 hover:text-gray-200"
