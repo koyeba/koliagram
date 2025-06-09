@@ -43,11 +43,11 @@
         <!-- Mobile menu button -->
         <button
           @click="isMobileMenuOpen = !isMobileMenuOpen"
-          class="md:hidden flex items-center justify-center z-70"
+          class="md:hidden flex items-center justify-center z-70 cursor-pointer"
           aria-label="Menu mobile"
+          :aria-expanded="isMobileMenuOpen"
         >
           <svg
-            v-if="!isMobileMenuOpen"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -57,10 +57,22 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <line x1="3" y1="7" x2="21" y2="7" />
-            <line x1="3" y1="17" x2="21" y2="17" />
+            <line
+              x1="3"
+              y1="7"
+              x2="19"
+              y2="7"
+              :class="{ 'transform-top': isMobileMenuOpen }"
+            />
+            <line
+              x1="3"
+              y1="17"
+              x2="19"
+              y2="17"
+              :class="{ 'transform-bottom': isMobileMenuOpen }"
+            />
           </svg>
-          <svg
+          <!-- <svg
             v-else
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -75,7 +87,7 @@
               stroke-width="1.2"
               d="M6 18L18 6M6 6l12 12"
             />
-          </svg>
+          </svg> -->
         </button>
       </div>
     </div>
@@ -159,5 +171,19 @@ watch(isMobileMenuOpen, (val) => {
 }
 .slide-down-leave-to {
   transform: translateY(-100%);
+}
+
+line {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  transform-origin: center;
+}
+
+/* Transformation en croix */
+.transform-top {
+  transform: rotate(45deg) translate(3px, 3px);
+}
+
+.transform-bottom {
+  transform: rotate(-45deg) translate(3px, -3px);
 }
 </style>
