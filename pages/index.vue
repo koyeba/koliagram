@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6">
+  <div class="px-6 sm:px-16 md:px-26 lg:px-36 xl:px-46 2xl:px-66">
     <div class="h-screen mb-16">
       <div
         class="flex flex-col gap-10 pt-35 lg:pt-50 text-center items-center mb-15 font-display"
@@ -10,7 +10,9 @@
             >koliagram.com</NuxtLink
           >
         </p>
-        <h1 class="text-6xl lg:text-7xl font-bold tracking-tighter">
+        <h1
+          class="text-6xl lg:text-7xl xl:text-8xl 2xl:text-[6rem] font-bold tracking-tighter"
+        >
           Maîtrisez <br class="lg:hidden" />
           votre image <br />
           en ligne <br class="lg:hidden" />à 100%
@@ -30,7 +32,9 @@
           >
         </p>
       </div>
-      <div class="flex gap-1 justify-between mb-18 items-center">
+      <div
+        class="flex gap-1 md:gap-10 justify-between md:justify-center mb-18 items-center"
+      >
         <img src="/logo-otacos.png" alt="Logo O'Tacos" class="w-18" />
         <img
           src="/logo-wafflefactory.png"
@@ -83,10 +87,14 @@
       <h2 class="text-5xl font-bold tracking-tight text-left">
         Vos réseaux sociaux en pilote automatique
       </h2>
+      <p class="text-left text-lg leading-7 tracking-tight font-light mb-15">
+        <span>Répondre à ses avis clients ne devrait pas être une corvée.</span>
+        On y réponds à votre place (ou non) avec vos directives.
+      </p>
     </div>
     <div class="flex flex-col items-end gap-10 mb-20">
       <p
-        class="text-sm text-center bg-gray-100 rounded-3xl py-2 w-42 font-medium"
+        class="text-sm text-center rounded-3xl py-2 w-42 font-medium bg-[#FF630B]"
       >
         Nos sur-mesures
       </p>
@@ -95,7 +103,7 @@
         sur-mesure
       </h2>
       <div
-        class="w-full h-96 bg-[url(/background-image-2.jpg)] bg-no-repeat bg-cover rounded-4xl shadow-2xl"
+        class="w-full h-96 bg-[url(/background-image-4.jpg)] bg-no-repeat bg-cover rounded-4xl shadow-2xl"
       ></div>
     </div>
   </div>

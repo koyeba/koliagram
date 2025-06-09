@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "Koliagram | Plateforme et solutions de réputation en ligne",
+  title: "Koliagram | La plateforme qui gère l'image de votre établissement.",
 });
 </script>
 
