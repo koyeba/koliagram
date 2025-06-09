@@ -180,10 +180,10 @@ line {
 
 /* Transformation en croix */
 .transform-top {
-  transform: rotate(45deg) translate(3px, 3px);
+  transform: rotate(45deg) translate(0px, 6px);
 }
 
 .transform-bottom {
-  transform: rotate(-45deg) translate(3px, -3px);
+  transform: rotate(-45deg) translate(0px, -6px);
 }
 </style>
