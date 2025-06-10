@@ -1,8 +1,8 @@
 <template>
   <div class="px-6 sm:px-16 md:px-26 lg:px-36 xl:px-46 2xl:px-66">
-    <div class="h-screen mb-16">
+    <div class="h-auto mb-40">
       <div
-        class="flex flex-col gap-10 pt-35 lg:pt-50 text-center items-center mb-15 font-display"
+        class="flex flex-col gap-10 pt-35 lg:pt-50 text-center items-center mb-14 font-display"
       >
         <p class="text-sm bg-gray-100 rounded-4xl py-2 w-60">
           Bienvenue sur
@@ -33,7 +33,7 @@
         </p>
       </div>
       <div
-        class="flex gap-1 md:gap-10 justify-between md:justify-center mb-18 items-center"
+        class="flex gap-1 md:gap-10 justify-between md:justify-center items-center"
       >
         <img src="/logo-otacos.png" alt="Logo O'Tacos" class="w-18" />
         <img
@@ -45,10 +45,13 @@
         <img src="/logo-planetsushi.png" alt="Logo Planet Sushi" class="w-20" />
       </div>
     </div>
-    <div class="mb-30">
-      <h2 class="text-left text-4xl tracking-tighter font-display font-bold">
-        Koliagram rend accessible sit amet consectetur, adipiscing elit.
-        Phasellus a quam eu odio elementum venenatis.
+    <div>
+      <h2
+        class="text-left text-4xl tracking-tighter font-display font-bold w-80 text-gray-300"
+      >
+        Koliagram permet de mieux fidéliser vos clients et d’en attirer des
+        nouveaux clients sans effort pour que vous puissiez vous concentrer sur
+        votre activité.
       </h2>
     </div>
     <div class="h-screen mb-26">
@@ -77,7 +80,7 @@
         nos retours clients négatifs "
       </h2>
       <p class="font-display tracking-tight font-semibold">
-        - Gilles Robin, franchisé O'Tacos
+        - Gilles, franchisé O'Tacos
       </p>
     </div>
     <div class="flex flex-col items-left text-center gap-10 mb-20">
@@ -94,7 +97,7 @@
     </div>
     <div class="flex flex-col items-end gap-10 mb-20">
       <p
-        class="text-sm text-center rounded-3xl py-2 w-42 font-medium bg-[#FF630B]"
+        class="text-sm text-center rounded-3xl py-2 w-42 font-medium bg-gray-100"
       >
         Nos sur-mesures
       </p>

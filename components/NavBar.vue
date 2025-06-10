@@ -1,9 +1,6 @@
 <template>
   <nav
-    class="w-full fixed top-0 z-50 backdrop-blur-lg bg-white/60 transition-all duration-300"
-    :class="{
-      'bg-white/80': scrolled,
-    }"
+    class="w-full fixed top-0 z-50 bg-white"
     aria-label="Navigation principale"
   >
     <div
@@ -72,22 +69,6 @@
               :class="{ 'transform-bottom': isMobileMenuOpen }"
             />
           </svg>
-          <!-- <svg
-            v-else
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg> -->
         </button>
       </div>
     </div>
@@ -97,12 +78,12 @@
       <nav
         v-if="isMobileMenuOpen"
         class="md:hidden fixed inset-0 h-screen z-60 px-12 overflow-hidden flex flex-col items-start gap-4 bg-white backdrop-blur-lg pt-14 text-xl font-display font-medium tracking-tight text-[#333336]"
+        aria-label="Navigation mobile"
       >
         <NuxtLink
           to="/login"
           @click="isMobileMenuOpen = false"
           aria-label="Connexion"
-          class=""
         >
           Se connecter
         </NuxtLink>
@@ -110,7 +91,6 @@
           to="/"
           @click="isMobileMenuOpen = false"
           aria-label="Réservez votre démo"
-          class=""
         >
           Réservez votre démo
         </NuxtLink>
@@ -118,7 +98,6 @@
           to="/register"
           @click="isMobileMenuOpen = false"
           aria-label="S'inscrire"
-          class=""
         >
           S'inscrire
         </NuxtLink>
@@ -158,7 +137,7 @@ watch(isMobileMenuOpen, (val) => {
 <style scoped>
 .slide-down-enter-active,
 .slide-down-leave-active {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .slide-down-enter-from {
   transform: translateY(-100%);
@@ -174,11 +153,12 @@ watch(isMobileMenuOpen, (val) => {
 }
 
 line {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
   transform-origin: center;
 }
 
-/* Transformation en croix */
+/* Transformation des barres en croix */
+
 .transform-top {
   transform: rotate(45deg) translate(0px, 6px);
 }
