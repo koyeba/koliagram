@@ -1,21 +1,27 @@
 <template>
-  <div class="py-4 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
-    <NuxtLink to="/" aria-label="Accueil">
-      <!-- Logo Mobile -->
-      <img
-        src="/symbol-koliagram.svg"
-        alt="Logo Koliagram (petit)"
-        class="w-8 block md:hidden"
-      />
-      <!-- Logo Desktop -->
-      <img
-        src="/logo-koliagram.svg"
-        alt="Logo Koliagram (grand)"
-        class="w-40 hidden md:block"
-      />
-    </NuxtLink>
-  </div>
-  <div class="flex max-w-lg m-auto mt-20 py-12 rounded-2xl lg:shadow-md">
+  <nav
+    class="w-full fixed top-0 z-50 bg-white"
+    aria-label="Navigation principale"
+  >
+    <div
+      class="max-w-[100rem] mx-auto py-4 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 transition-padding duration-300"
+    >
+      <!-- Logo -->
+      <NuxtLink to="/" aria-label="Accueil">
+        <img
+          src="/symbol-koliagram.svg"
+          alt="Logo Koliagram (petit)"
+          class="w-8 block md:hidden"
+        />
+        <img
+          src="/logo-koliagram.svg"
+          alt="Logo Koliagram (grand)"
+          class="w-40 hidden md:block"
+        />
+      </NuxtLink>
+    </div>
+  </nav>
+  <div class="flex max-w-lg m-auto mt-20 py-11 rounded-2xl lg:shadow-md">
     <div class="font-display w-full px-12">
       <h1 class="text-center text-2xl font-bold mb-14">Se connecter</h1>
       <form @submit.prevent="handleLogin">

@@ -17,12 +17,12 @@
           votre image <br />
           en ligne <br class="lg:hidden" />à 100%
         </h1>
-        <button
-          type="button"
-          class="px-10 py-4 rounded-full bg-[#FF630B] text-white font-semibold"
+        <NuxtLink
+          to="/"
+          class="px-10 py-4 rounded-full bg-[#FF630B] hover:bg-[#CC5009] transition-colors duration-300 text-white font-semibold"
         >
           Réservez votre démo
-        </button>
+        </NuxtLink>
       </div>
       <div class="mb-12">
         <p class="text-center text-sm font-display">
@@ -45,16 +45,16 @@
         <img src="/logo-planetsushi.png" alt="Logo Planet Sushi" class="w-20" />
       </div>
     </div>
-    <div>
+    <div class="mb-10">
       <h2
-        class="text-left text-4xl tracking-tighter font-display font-bold w-80 text-gray-300"
+        class="text-left text-4xl lg:text-5xl tracking-tighter font-display font-bold w-80 md:w-280 text-gray-300"
       >
         Koliagram permet de mieux fidéliser vos clients et d’en attirer des
-        nouveaux clients sans effort pour que vous puissiez vous concentrer sur
-        votre activité.
+        nouveaux sans efforts pour que vous puissiez vous concentrer sur votre
+        activité.
       </h2>
     </div>
-    <div class="h-screen mb-26">
+    <div class="h-screen mb-22">
       <div class="flex flex-col items-center text-center gap-10 font-display">
         <p class="text-sm bg-gray-100 rounded-3xl py-2 w-48 font-medium">
           Prise en main rapide
@@ -63,7 +63,7 @@
           Votre image <br />
           est essentiel
         </h2>
-        <p class="text-lg leading-7 tracking-tight font-light mb-15">
+        <p class="text-sm font-light tracking-tighter w-68 leading-5">
           <span
             >Répondre à ses avis clients ne devrait pas être une corvée.</span
           >
@@ -75,7 +75,9 @@
       </div>
     </div>
     <div class="flex flex-col items-center text-center gap-5 mb-20">
-      <h2 class="text-center text-4xl tracking-tighter font-display font-bold">
+      <h2
+        class="text-center text-3xl tracking-tighter font-display font-bold w-74"
+      >
         " Depuis qu'on a découvert Koliagram, on a jamais été aussi efficace sur
         nos retours clients négatifs "
       </h2>
@@ -90,7 +92,7 @@
       <h2 class="text-5xl font-bold tracking-tight text-left">
         Vos réseaux sociaux en pilote automatique
       </h2>
-      <p class="text-left text-lg leading-7 tracking-tight font-light mb-15">
+      <p class="text-left text-sm tracking-tight font-light mb-12">
         <span>Répondre à ses avis clients ne devrait pas être une corvée.</span>
         On y réponds à votre place (ou non) avec vos directives.
       </p>

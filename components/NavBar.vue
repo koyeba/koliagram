@@ -1,10 +1,7 @@
 <template>
-  <nav
-    class="w-full fixed top-0 z-50 bg-white"
-    aria-label="Navigation principale"
-  >
+  <nav class="w-full fixed top-0 z-50" aria-label="Navigation principale">
     <div
-      class="max-w-[100rem] mx-auto flex justify-between items-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-4 transition-padding duration-300"
+      class="max-w-[100rem] mx-auto flex justify-between items-center py-4 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 transition-padding duration-300"
     >
       <!-- Logo -->
       <NuxtLink to="/" aria-label="Accueil" class="flex items-center">
@@ -21,18 +18,20 @@
       </NuxtLink>
 
       <!-- Desktop menu -->
-      <div class="flex md:flex items-center gap-3 md:gap-4">
+      <div
+        class="flex items-center gap-1 md:gap-3 text-xs lg:text-sm font-display font-medium py-1 px-1 pr-2 md:pr-1 rounded-full bg-white"
+      >
         <NuxtLink
           to="/login"
           aria-label="Connexion"
-          class="text-white text-xs lg:text-sm font-display px-4 py-2 rounded-full bg-[#FF630B] hover:bg-[#ff7223] transition-colors duration-200"
+          class="text-white px-4 py-2 rounded-full bg-[#FF630B] hover:bg-[#CC5009] transition-colors duration-300"
         >
           Se connecter
         </NuxtLink>
         <NuxtLink
-          to="/demo"
+          to="/"
           aria-label="Réservez votre démo"
-          class="hidden md:block text-black hover:bg-black hover:text-white text-xs lg:text-sm font-display px-4 py-2 rounded-full border transition-colors duration-200"
+          class="hidden md:block hover:bg-gray-100 px-4 py-2 rounded-full transition-colors duration-300 text-[#333336] hover:text-black"
         >
           Réservez votre démo
         </NuxtLink>
@@ -77,29 +76,32 @@
     <transition name="slide-down">
       <nav
         v-if="isMobileMenuOpen"
-        class="md:hidden fixed inset-0 h-screen z-60 px-12 overflow-hidden flex flex-col items-start gap-4 bg-white backdrop-blur-lg pt-14 text-xl font-display font-medium tracking-tight text-[#333336]"
+        class="md:hidden fixed inset-0 h-screen z-60 px-12 overflow-hidden flex flex-col items-start gap-4 bg-white pt-14 text-xl font-display font-medium tracking-tight text-[#333336]"
         aria-label="Navigation mobile"
       >
         <NuxtLink
           to="/login"
           @click="isMobileMenuOpen = false"
           aria-label="Connexion"
+          class="hover:text-black"
         >
           Se connecter
-        </NuxtLink>
-        <NuxtLink
-          to="/"
-          @click="isMobileMenuOpen = false"
-          aria-label="Réservez votre démo"
-        >
-          Réservez votre démo
         </NuxtLink>
         <NuxtLink
           to="/register"
           @click="isMobileMenuOpen = false"
           aria-label="S'inscrire"
+          class="hover:text-black"
         >
           S'inscrire
+        </NuxtLink>
+        <NuxtLink
+          to="/"
+          @click="isMobileMenuOpen = false"
+          aria-label="Réservez votre démo"
+          class="hover:text-black"
+        >
+          Réservez votre démo
         </NuxtLink>
       </nav>
     </transition>

@@ -1,21 +1,27 @@
 <template>
   <div>
-    <div class="py-4 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
-      <NuxtLink to="/" aria-label="Accueil">
-        <!-- Logo Mobile -->
-        <img
-          src="/symbol-koliagram.svg"
-          alt="Logo Koliagram (petit)"
-          class="w-8 block md:hidden"
-        />
-        <!-- Logo Desktop -->
-        <img
-          src="/logo-koliagram.svg"
-          alt="Logo Koliagram (grand)"
-          class="w-40 hidden md:block"
-        />
-      </NuxtLink>
-    </div>
+    <nav
+      class="w-full fixed top-0 z-50 bg-white"
+      aria-label="Navigation principale"
+    >
+      <div
+        class="max-w-[100rem] mx-auto py-4 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 transition-padding duration-300"
+      >
+        <!-- Logo -->
+        <NuxtLink to="/" aria-label="Accueil">
+          <img
+            src="/symbol-koliagram.svg"
+            alt="Logo Koliagram (petit)"
+            class="w-8 block md:hidden"
+          />
+          <img
+            src="/logo-koliagram.svg"
+            alt="Logo Koliagram (grand)"
+            class="w-40 hidden md:block"
+          />
+        </NuxtLink>
+      </div>
+    </nav>
     <div
       class="font-display mt-16 py-12 max-w-lg m-auto px-12 rounded-2xl lg:shadow-md"
     >
