@@ -1,19 +1,13 @@
 <template>
-  <footer class="bg-[#F5F5F7] py-8 px-6">
-    <img
-      src="/logo-koliagram.svg"
-      alt="Logo Koliagram (grand)"
-      class="w-40 m-auto"
-    />
+  <footer class="bg-gray-100 py-8 px-6 mt-6">
+    <img src="/logo-koliagram.svg" alt="Logo Koliagram (grand)" class="w-40" />
     <nav
-      class="flex flex-col gap-2 py-3 font-display text-center"
+      class="flex flex-col gap-2 py-3 font-display text-left text-sm"
       aria-label="Navigation secondaire"
     >
-      <p class="text-sm font-medium tracking-tight">En savoir plus</p>
-      <NuxtLink to="/login" class="text-xs font-light">Se connecter</NuxtLink>
-      <NuxtLink to="/register" class="text-xs font-light">S'inscrire</NuxtLink>
-      <NuxtLink to="/" class="text-xs font-light">Réservez votre démo</NuxtLink>
-      <p class="text-xs font-light pt-8 tracking-tight">
+      <NuxtLink to="/login">Se connecter</NuxtLink>
+      <NuxtLink to="/" class="mb-8">Réservez votre démo</NuxtLink>
+      <p class="tracking-tight">
         Copyright &copy; {{ currentYear }} Koliagram. Tous droits réservés.
       </p>
     </nav>

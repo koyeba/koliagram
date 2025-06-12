@@ -1,7 +1,7 @@
 <template>
   <nav class="w-full fixed top-0 z-50" aria-label="Navigation principale">
     <div
-      class="max-w-[100rem] mx-auto flex justify-between items-center py-4 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 transition-padding duration-300"
+      class="bg-white mx-auto flex justify-between items-center py-2 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 transition-padding duration-30"
     >
       <!-- Logo -->
       <NuxtLink to="/" aria-label="Accueil" class="flex items-center">
@@ -19,12 +19,12 @@
 
       <!-- Desktop menu -->
       <div
-        class="flex items-center gap-1 md:gap-3 text-xs lg:text-sm font-display font-medium py-1 px-1 pr-2 md:pr-1 rounded-full bg-white"
+        class="flex items-center gap-4 text-sm font-display font-medium py-1 md:pr-1"
       >
         <NuxtLink
           to="/login"
           aria-label="Connexion"
-          class="text-white px-4 py-2 rounded-full bg-[#FF630B] hover:bg-[#CC5009] transition-colors duration-300"
+          class="bg-[#FF630B] hover:bg-[#CC5009] px-5 py-2 text-white rounded-full transition-colors duration-300"
         >
           Se connecter
         </NuxtLink>
@@ -39,7 +39,7 @@
         <!-- Mobile menu button -->
         <button
           @click="isMobileMenuOpen = !isMobileMenuOpen"
-          class="md:hidden flex items-center justify-center z-70 cursor-pointer"
+          class="md:hidden flex items-center justify-center z-100 cursor-pointer"
           aria-label="Menu mobile"
           :aria-expanded="isMobileMenuOpen"
         >
@@ -86,14 +86,6 @@
           class="hover:text-black"
         >
           Se connecter
-        </NuxtLink>
-        <NuxtLink
-          to="/register"
-          @click="isMobileMenuOpen = false"
-          aria-label="S'inscrire"
-          class="hover:text-black"
-        >
-          S'inscrire
         </NuxtLink>
         <NuxtLink
           to="/"

@@ -1,80 +1,58 @@
 <template>
-  <nav
-    class="w-full fixed top-0 z-50 bg-white"
-    aria-label="Navigation principale"
-  >
-    <div
-      class="max-w-[100rem] mx-auto py-4 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 transition-padding duration-300"
+  <div class="h-lvh flex flex-col justify-center items-center gap-10 px-6">
+    <NuxtLink to="/">
+      <img src="/logo-koliagram.svg" alt="Logo Koliagram (grand)" class="w-40"
+    /></NuxtLink>
+    <h2 id="login-title" class="sr-only">Connexion à Koliagram</h2>
+    <form
+      role="form"
+      @submit.prevent="handleLogin"
+      class="text-sm flex flex-col w-full gap-1"
+      aria-labelledby="login-title"
     >
-      <!-- Logo -->
-      <NuxtLink to="/" aria-label="Accueil">
-        <img
-          src="/symbol-koliagram.svg"
-          alt="Logo Koliagram (petit)"
-          class="w-8 block md:hidden"
-        />
-        <img
-          src="/logo-koliagram.svg"
-          alt="Logo Koliagram (grand)"
-          class="w-40 hidden md:block"
-        />
-      </NuxtLink>
-    </div>
-  </nav>
-  <div class="flex max-w-lg m-auto mt-20 py-11 rounded-2xl lg:shadow-md">
-    <div class="font-display w-full px-12">
-      <h1 class="text-center text-2xl font-bold mb-14">Se connecter</h1>
-      <form @submit.prevent="handleLogin">
-        <div class="mb-6">
-          <label for="email" class="block text-sm mb-2 text-gray-600"
-            >Email / Nom d'utilisateur
-          </label>
-          <input
-            v-model="email"
-            type="email"
-            id="email"
-            placeholder="helloworld@gmail.com"
-            required
-            class="block w-full text-sm px-4 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#FF630B]"
-          />
-        </div>
-        <div class="mb-6">
-          <label for="password" class="block text-sm mb-2 text-gray-600"
-            >Mot de passe</label
-          >
-          <input
-            v-model="password"
-            type="password"
-            id="password"
-            placeholder="Mot de passe"
-            required
-            class="block w-full text-sm px-4 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#FF630B]"
-          />
-          <div class="text-right mt-1">
-            <NuxtLink
-              to="/reset"
-              class="text-xs text-gray-400 hover:text-gray-200"
-            >
-              Mot de passe oublié ?
-            </NuxtLink>
-          </div>
-        </div>
-        <button
-          type="submit"
-          class="w-full py-2 px-4 bg-[#FF630B] hover:bg-[#ff7223] text-white rounded-full cursor-pointer transition duration-200"
-        >
-          Se connecter
-        </button>
-      </form>
-      <div>
-        <p class="text-center text-xs text-gray-600 mt-4">
-          Vous n'avez pas de compte ?
-          <NuxtLink to="/register" class="text-[#FF630B] hover:text-black"
-            >Inscrivez-vous</NuxtLink
-          >
-        </p>
+      <label for="email" class="block text-gray-600"
+        >Email / Nom d'utilisateur
+      </label>
+      <input
+        v-model="email"
+        autocomplete="username"
+        type="email"
+        id="email"
+        placeholder="helloworld@gmail.com"
+        required
+        aria-required="true"
+        class="px-4 py-2 border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#FF630B] focus-visible:ring-offset-2 rounded-full mb-4"
+      />
+      <label for="password" class="block text-gray-600">Mot de passe</label>
+      <input
+        v-model="password"
+        autocomplete="current-password"
+        type="password"
+        id="password"
+        placeholder="Mot de passe"
+        required
+        aria-required="true"
+        class="px-4 py-2 border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#FF630B] focus-visible:ring-offset-2 rounded-full"
+      />
+      <div class="text-right">
+        <NuxtLink to="/reset" class="text-xs text-gray-400 hover:text-gray-200">
+          Mot de passe oublié ?
+        </NuxtLink>
       </div>
-    </div>
+      <button
+        type="submit"
+        class="w-full mt-4 py-2 px-4 bg-[#FF630B] hover:bg-[#ff7223] text-white rounded-full cursor-pointer transition duration-200"
+        aria-label="Se connecter à votre compte"
+      >
+        Se connecter
+      </button>
+      <p class="text-center text-xs text-gray-600 mt-2">
+        Vous n'avez pas de compte ?
+        <NuxtLink to="/register" class="text-[#FF630B] hover:text-black"
+          >Inscrivez-vous</NuxtLink
+        >
+      </p>
+    </form>
   </div>
 </template>
 

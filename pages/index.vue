@@ -1,10 +1,10 @@
 <template>
-  <div class="px-6 sm:px-16 md:px-26 lg:px-36 xl:px-46 2xl:px-66">
+  <div>
     <div class="h-auto mb-40">
       <div
         class="flex flex-col gap-10 pt-35 lg:pt-50 text-center items-center mb-14 font-display"
       >
-        <p class="text-sm bg-gray-100 rounded-4xl py-2 w-60">
+        <p class="text-sm bg-gray-100 rounded-full py-2 w-60">
           Bienvenue sur
           <NuxtLink to="/" class="font-bold text-[#FF630B]"
             >koliagram.com</NuxtLink
@@ -24,7 +24,7 @@
           Réservez votre démo
         </NuxtLink>
       </div>
-      <div class="mb-12">
+      <div class="mb-12 px-6">
         <p class="text-center text-sm font-display">
           Les meilleurs établissement nous font
           <span class="font-bold"
@@ -33,7 +33,7 @@
         </p>
       </div>
       <div
-        class="flex gap-1 md:gap-10 justify-between md:justify-center items-center"
+        class="flex gap-1 md:gap-10 justify-between md:justify-center items-center px-6"
       >
         <img src="/logo-otacos.png" alt="Logo O'Tacos" class="w-18" />
         <img
@@ -45,71 +45,93 @@
         <img src="/logo-planetsushi.png" alt="Logo Planet Sushi" class="w-20" />
       </div>
     </div>
-    <div class="mb-10">
-      <h2
-        class="text-left text-4xl lg:text-5xl tracking-tighter font-display font-bold w-80 md:w-280 text-gray-300"
-      >
-        Koliagram permet de mieux fidéliser vos clients et d’en attirer des
-        nouveaux sans efforts pour que vous puissiez vous concentrer sur votre
-        activité.
-      </h2>
-    </div>
-    <div class="h-screen mb-22">
-      <div class="flex flex-col items-center text-center gap-10 font-display">
-        <p class="text-sm bg-gray-100 rounded-3xl py-2 w-48 font-medium">
-          Prise en main rapide
-        </p>
-        <h2 class="text-5xl font-bold tracking-tight">
-          Votre image <br />
-          est essentiel
-        </h2>
-        <p class="text-sm font-light tracking-tighter w-68 leading-5">
-          <span
-            >Répondre à ses avis clients ne devrait pas être une corvée.</span
-          >
-          On y réponds à votre place (ou non) avec vos directives.
-        </p>
-        <div
-          class="w-full h-[30rem] bg-[url(/background-image-1.jpg)] bg-no-repeat bg-cover rounded-4xl shadow-2xl"
-        ></div>
-      </div>
-    </div>
-    <div class="flex flex-col items-center text-center gap-5 mb-20">
-      <h2
-        class="text-center text-3xl tracking-tighter font-display font-bold w-74"
-      >
-        " Depuis qu'on a découvert Koliagram, on a jamais été aussi efficace sur
-        nos retours clients négatifs "
-      </h2>
-      <p class="font-display tracking-tight font-semibold">
-        - Gilles, franchisé O'Tacos
-      </p>
-    </div>
-    <div class="flex flex-col items-left text-center gap-10 mb-20">
-      <p class="text-sm bg-gray-100 rounded-3xl py-2 w-36 font-medium">
-        Animation
-      </p>
-      <h2 class="text-5xl font-bold tracking-tight text-left">
-        Vos réseaux sociaux en pilote automatique
-      </h2>
-      <p class="text-left text-sm tracking-tight font-light mb-12">
-        <span>Répondre à ses avis clients ne devrait pas être une corvée.</span>
-        On y réponds à votre place (ou non) avec vos directives.
-      </p>
-    </div>
-    <div class="flex flex-col items-end gap-10 mb-20">
-      <p
-        class="text-sm text-center rounded-3xl py-2 w-42 font-medium bg-gray-100"
-      >
-        Nos sur-mesures
-      </p>
-      <h2 class="text-5xl font-bold tracking-tight text-right">
-        Création digitale <br />
-        sur-mesure
-      </h2>
+    <div class="h-screen pt-2">
       <div
-        class="w-full h-96 bg-[url(/background-image-4.jpg)] bg-no-repeat bg-cover rounded-4xl shadow-2xl"
-      ></div>
+        class="flex flex-col items-center text-center gap-5 sm:gap-10 font-display"
+      >
+        <p class="bg-gray-100 text-sm rounded-full py-2 w-48">
+          Prise en main <span class="font-bold text-[#FF630B]">rapide</span>
+        </p>
+        <h2 class="text-4xl lg:text-5xl font-bold tracking-tighter">
+          Découvrez votre <br class="xl:hidden" />
+          nouvel allié.
+        </h2>
+        <div
+          class="w-full max-w-full relative overflow-x-scroll scroll-smooth overflow-y-hidden pl-6 sm:pl-18 md:pl-54 lg:pl-60 xl:pl-70 2xl:pl-120"
+          style="scrollbar-width: none; -ms-overflow-style: none"
+        >
+          <div class="w-full">
+            <ul class="grid grid-flow-col auto-cols-max list-none gap-4 pr-10">
+              <li
+                class="bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent),url('/background-image-1.jpg')] bg-no-repeat bg-cover h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+              >
+                <div class="py-6 px-6 text-center">
+                  <p
+                    class="text-xs lg:text-lg text-white font-semibold font-display text-left"
+                  >
+                    Rapidité
+                  </p>
+                  <p
+                    class="text-sm lg:text-sm text-white font-semibold text-left"
+                  >
+                    Installation en 5 min chrono.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent),url('/background-image-2.jpg')] bg-no-repeat bg-cover h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+              >
+                <div class="py-6 px-6 text-center">
+                  <p
+                    class="text-xs lg:text-lg text-white font-semibold font-display text-left"
+                  >
+                    Valorisation
+                  </p>
+                  <p
+                    class="text-sm lg:text-sm text-white font-semibold text-left"
+                  >
+                    Pile à votre image.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent),url('/background-image-4.jpg')] bg-no-repeat bg-cover h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+              >
+                <div class="py-6 px-6 text-center">
+                  <p
+                    class="text-xs lg:text-lg text-white font-semibold font-display text-left"
+                  >
+                    Visibilité
+                  </p>
+                  <p
+                    class="text-sm lg:text-sm text-white font-semibold text-left"
+                  >
+                    Vous n'aurait jamais été aussi visibles.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+              ></li>
+              <li
+                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+              ></li>
+              <li
+                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+              ></li>
+              <li
+                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+              ></li>
+              <li
+                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+              ></li>
+
+              <!-- Padding de fin -->
+              <li aria-hidden="true" class="w-2 lg:w-12"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
