@@ -1,81 +1,55 @@
 <template>
-  <div>
-    <nav
-      class="w-full fixed top-0 z-50 bg-white"
-      aria-label="Navigation principale"
+  <div
+    class="h-lvh flex flex-col justify-center items-center px-6 gap-10 md:gap-20 md:max-w-lg md:m-auto"
+  >
+    <NuxtLink to="/">
+      <img
+        src="/logo-koliagram.svg"
+        alt="Logo Koliagram (grand)"
+        class="w-40 md:w-60"
+    /></NuxtLink>
+    <h2 id="login-title" class="sr-only">Inscription à Koliagram</h2>
+    <form
+      role="form"
+      class="text-sm flex flex-col w-full gap-1"
+      aria-labelledby="login-title"
     >
-      <div
-        class="max-w-[100rem] mx-auto py-4 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 transition-padding duration-300"
+      <label for="email" class="block text-gray-600"
+        >Email / Nom d'utilisateur
+      </label>
+      <input
+        autocomplete="username"
+        type="email"
+        id="email"
+        placeholder="helloworld@gmail.com"
+        required
+        aria-required="true"
+        class="px-4 py-2 border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#FF630B] focus-visible:ring-offset-2 rounded-full mb-4"
+      />
+      <label for="password" class="block text-gray-600">Mot de passe</label>
+      <input
+        autocomplete="current-password"
+        type="password"
+        id="password"
+        placeholder="Mot de passe"
+        required
+        aria-required="true"
+        class="px-4 py-2 border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#FF630B] focus-visible:ring-offset-2 rounded-full"
+      />
+      <button
+        type="submit"
+        class="w-full mt-4 py-2 px-4 bg-[#FF630B] hover:bg-[#ff7223] text-white rounded-full cursor-pointer transition duration-200"
+        aria-label="S'inscrire à votre Koliagram"
       >
-        <!-- Logo -->
-        <NuxtLink to="/" aria-label="Accueil">
-          <img
-            src="/symbol-koliagram.svg"
-            alt="Logo Koliagram (petit)"
-            class="w-8 block md:hidden"
-          />
-          <img
-            src="/logo-koliagram.svg"
-            alt="Logo Koliagram (grand)"
-            class="w-40 hidden md:block"
-          />
-        </NuxtLink>
-      </div>
-    </nav>
-    <div
-      class="font-display mt-16 py-12 max-w-lg m-auto px-12 rounded-2xl lg:shadow-md"
-    >
-      <h1 class="text-2xl font-bold mb-14 text-center">S'inscrire</h1>
-      <form class="flex flex-col text-sm">
-        <div class="mb-6">
-          <label for="email" class="block text-sm mb-2 text-gray-600"
-            >Email</label
-          >
-          <input
-            type="email"
-            id="email"
-            placeholder="helloworld@gmail.com"
-            required
-            class="block w-full text-sm px-4 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#FF630B]"
-          />
-        </div>
-        <div class="mb-6">
-          <label for="username" class="block text-sm mb-2 text-gray-600"
-            >Nom d'utilisateur / établissement</label
-          >
-          <input
-            type="text"
-            placeholder="mcdonaldschampselysee"
-            class="block w-full text-sm px-4 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#FF630B]"
-          />
-        </div>
-        <div class="mb-6">
-          <label for="password" class="block text-sm mb-2 text-gray-600"
-            >Mot de passe</label
-          >
-          <input
-            type="password"
-            required
-            placeholder="Mot de passe"
-            class="block w-full text-sm px-4 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#FF630B]"
-          />
-        </div>
-        <button
-          type="submit"
-          class="w-full py-2 px-4 bg-[#FF630B] hover:bg-[#ff7223] text-white rounded-full cursor-pointer transition duration-200"
+        S'inscrire
+      </button>
+      <p class="text-center text-xs text-gray-600 mt-2">
+        Vous avez déjà un compte ?
+        <NuxtLink to="/login" class="text-[#FF630B] hover:text-black"
+          >Connectez-vous</NuxtLink
         >
-          S'inscrire
-        </button>
-      </form>
-      <div>
-        <p class="text-center text-xs text-gray-600 mt-4">
-          Vous avez déjà un compte ?
-          <NuxtLink to="/login" class="text-[#FF630B] hover:text-black"
-            >Connectez-vous</NuxtLink
-          >
-        </p>
-      </div>
-    </div>
+      </p>
+    </form>
   </div>
 </template>
 
