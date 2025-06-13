@@ -55,7 +55,7 @@
         <h2 class="text-4xl lg:text-5xl font-bold tracking-tighter">
           Découvrez votre <br class="xl:hidden" />
           nouvel allié.
-        </h2>
+        </h2> 
         <div
           class="w-full max-w-full relative overflow-x-scroll scroll-smooth overflow-y-hidden pl-6 sm:pl-18 md:pl-54 lg:pl-60 xl:pl-70 2xl:pl-120"
           style="scrollbar-width: none; -ms-overflow-style: none"
@@ -63,7 +63,7 @@
           <div class="w-full">
             <ul class="grid grid-flow-col auto-cols-max list-none gap-4 pr-10">
               <li
-                class="bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent),url('/background-image-1.jpg')] bg-no-repeat bg-cover h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+                class="bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent),url('/background-image-1.jpg')] bg-no-repeat bg-cover h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-4xl"
               >
                 <div class="py-6 px-6 text-center">
                   <p
@@ -79,7 +79,7 @@
                 </div>
               </li>
               <li
-                class="bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent),url('/background-image-2.jpg')] bg-no-repeat bg-cover h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+                class="bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent),url('/background-image-2.jpg')] bg-no-repeat bg-cover h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-4xl"
               >
                 <div class="py-6 px-6 text-center">
                   <p
@@ -95,7 +95,7 @@
                 </div>
               </li>
               <li
-                class="bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent),url('/background-image-4.jpg')] bg-no-repeat bg-cover h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+                class="bg-[linear-gradient(to_bottom,rgba(0,0,0,0.9),transparent),url('/background-image-4.jpg')] bg-no-repeat bg-cover h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-4xl"
               >
                 <div class="py-6 px-6 text-center">
                   <p
@@ -111,21 +111,20 @@
                 </div>
               </li>
               <li
-                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-4xl"
               ></li>
               <li
-                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-4xl"
               ></li>
               <li
-                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-4xl"
               ></li>
               <li
-                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-4xl"
               ></li>
               <li
-                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-full"
+                class="bg-gray-100 h-[33rem] md:h-[42rem] xl:h-[46rem] w-[16rem] md:w-[21rem] lg:w-[23rem] rounded-4xl"
               ></li>
-
               <!-- Padding de fin -->
               <li aria-hidden="true" class="w-2 lg:w-12"></li>
             </ul>

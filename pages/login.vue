@@ -1,7 +1,12 @@
 <template>
-  <div class="h-lvh flex flex-col justify-center items-center gap-10 px-6">
+  <div
+    class="h-lvh flex flex-col justify-center items-center px-6 gap-10 md:gap-20 md:max-w-lg md:m-auto"
+  >
     <NuxtLink to="/">
-      <img src="/logo-koliagram.svg" alt="Logo Koliagram (grand)" class="w-40"
+      <img
+        src="/logo-koliagram.svg"
+        alt="Logo Koliagram (grand)"
+        class="w-40 md:w-60"
     /></NuxtLink>
     <h2 id="login-title" class="sr-only">Connexion à Koliagram</h2>
     <form
