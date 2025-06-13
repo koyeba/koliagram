@@ -8,11 +8,11 @@
         alt="Logo Koliagram (grand)"
         class="w-40 md:w-60"
     /></NuxtLink>
-    <h2 id="login-title" class="sr-only">Inscription à Koliagram</h2>
+    <h2 id="register-title" class="sr-only">Inscription à Koliagram</h2>
     <form
       role="form"
       class="text-sm flex flex-col w-full gap-1"
-      aria-labelledby="login-title"
+      aria-labelledby="register-title"
     >
       <label for="email" class="block text-gray-600"
         >Email / Nom d'utilisateur
