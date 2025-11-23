@@ -46,7 +46,7 @@ watch(isMobileMenuOpen, (val) => {
         class="flex items-center gap-4 text-sm font-display font-medium tracking-tight py-1 md:pr-1"
       >
         <NuxtLink
-          to="/"
+          to="/login"
           aria-label="Connexion"
           class="bg-[#FF630B] hover:bg-[#CC5009] px-5 py-2 text-white rounded-full transition-colors duration-300"
         >
@@ -101,14 +101,6 @@ watch(isMobileMenuOpen, (val) => {
         class="md:hidden fixed inset-0 h-screen z-60 px-12 overflow-hidden flex flex-col items-start gap-4 bg-white pt-14 text-xl font-display font-medium tracking-tight text-[#333336]"
         aria-label="Navigation mobile"
       >
-        <NuxtLink
-          to="/"
-          @click="isMobileMenuOpen = false"
-          aria-label="Se connecter"
-          class="hover:text-black"
-        >
-          Se connecter
-        </NuxtLink>
         <NuxtLink
           to="/"
           @click="isMobileMenuOpen = false"
