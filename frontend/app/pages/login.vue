@@ -18,12 +18,6 @@ const handleLogin = async () => {
     // TODO: Replace with your actual authentication API
     await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call
 
-    // Example login logic (replace with real API)
-    console.log("Login attempt:", {
-      username: username.value,
-      password: password.value,
-    });
-
     // Success - redirect to dashboard or home
     navigateTo("/");
   } catch (e) {
